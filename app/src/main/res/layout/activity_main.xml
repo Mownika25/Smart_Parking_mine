@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
+
+
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USER LOGIN"
+        android:layout_margin="20dp"
+        android:id="@+id/user_login_button"
+        android:layout_above="@id/admin_login_button"/>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:id="@+id/log_card"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#2F6FA0"
+       >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/user_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" USER LOGIN"
+                android:textColor="@color/cardview_light_background"
+                android:layout_centerInParent="true"/>
+
+
+
+
+
+
+
+         </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:id="@+id/log1_card"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#306E9E"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/admin_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_light_background"
+                android:layout_centerInParent="true"
+                android:text="ADMIN LOGIN"
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:id="@+id/log3_card"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#2C5D83"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUEST LOGIN"
+        android:textColor="@color/cardview_light_background"
+        android:layout_centerInParent="true"
+        />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
