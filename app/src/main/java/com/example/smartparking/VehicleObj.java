@@ -3,7 +3,7 @@ package com.example.smartparking;
 public class VehicleObj {
     int noOfWheels;
     float dimension;//keep either 1
-    String vehno, vehId,userId;//registration no.
+    String vehno, vehId,userId,startTime,endTime;//registration no.
 
     public void setDimension(float dimension) {
         this.dimension = dimension;
@@ -11,6 +11,22 @@ public class VehicleObj {
 
     public void setNoOfWheels(int noOfWheels) {
         this.noOfWheels = noOfWheels;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
     public int getNoOfWheels() {

@@ -67,4 +67,11 @@ public class ParkingSlotObject
         this.location = location;
         this.nameOfArea = nameOfArea;
     }
+
+    public ParkingSlotObject(int capacity, double area, String location, String nameOfArea) {
+        this.capacity = capacity;
+        this.area = area;
+        this.location = location;
+        this.nameOfArea = nameOfArea;
+    }
 }

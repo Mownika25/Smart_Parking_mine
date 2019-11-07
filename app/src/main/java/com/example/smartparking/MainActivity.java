@@ -2,28 +2,22 @@ package com.example.smartparking;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-
- import com.example.smartparking.GuestLoginActivity;
- import com.example.smartparking.LoginActivity;
-import com.example.smartparking.R;
-
-import org.w3c.dom.Text;
+import androidx.cardview.widget.CardView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private TextView admin,user,guest;
+    CardView admin,user,guest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        admin=findViewById(R.id.admin_login_button);
-        user= findViewById(R.id.user_login_button);
-        guest=findViewById(R.id.guest);
+        admin=findViewById(R.id.log1_card);
+        user= findViewById(R.id.log_card);
+        guest=findViewById(R.id.log3_card);
 
         user.setOnClickListener(new View.OnClickListener() {
             @Override

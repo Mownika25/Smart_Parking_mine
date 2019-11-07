@@ -54,7 +54,7 @@ public class AdminObject {
     }
     AdminObject()
     {
-        avgUsage=00;
+        avgUsage=0;
         peakHr=0;
         lowHr=0;
         pricePerHour=0;

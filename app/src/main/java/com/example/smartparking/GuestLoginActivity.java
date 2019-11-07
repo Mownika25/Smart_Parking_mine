@@ -32,8 +32,8 @@ import java.util.concurrent.TimeUnit;
 
 public class GuestLoginActivity extends AppCompatActivity {
     CountryCodePicker cpp;
-  EditText  phnNo, password;
-  Button generateOtp, verifyPhoneNumber;
+    EditText  phnNo, password;
+    Button generateOtp, verifyPhoneNumber;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
     FirebaseAuth auth;
     String phoneNumber,verificationCode,otp;
@@ -45,9 +45,9 @@ public class GuestLoginActivity extends AppCompatActivity {
         cpp=(CountryCodePicker) findViewById(R.id.country_code_picker);
 
         verifyPhoneNumber=findViewById(R.id.verify);
-     generateOtp=findViewById(R.id.gen_otp);
-     phnNo=findViewById(R.id.phn_num);
-     password=findViewById(R.id.password);
+        generateOtp=findViewById(R.id.gen_otp);
+        phnNo=findViewById(R.id.phn_num);
+        password=findViewById(R.id.password);
 
         registerReceiver(receiver2,new IntentFilter("Message Receiver"));
 
@@ -63,7 +63,7 @@ public class GuestLoginActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,new String[]{"android.permission.READ_SMS"},CODEREQ);
         }
 
-     //   findViews();
+        //   findViews();
         StartFirebaseLogin();
 
 
@@ -81,7 +81,7 @@ public class GuestLoginActivity extends AppCompatActivity {
                         TimeUnit.SECONDS,                // Unit of timeout
                         GuestLoginActivity.this,        // Activity (for callback binding)
                         mCallback);                      // OnVerificationStateChangedCallbacks
-              //  Toast.makeText(getApplicationContext(),"sms code sent!!",Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(getApplicationContext(),"sms code sent!!",Toast.LENGTH_SHORT).show();
             }
         });
         //Above method will send an SMS to the provided phone number. As verifyPhoneNumber() is reentrant, it will not send another
@@ -91,13 +91,13 @@ public class GuestLoginActivity extends AppCompatActivity {
         password.requestFocus();
         InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         mgr.showSoftInput(password, InputMethodManager.SHOW_FORCED);
-       // password.setText();
+        // password.setText();
 
 
         verifyPhoneNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 otp=password.getText().toString();
+                otp=password.getText().toString();
                 PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationCode, otp);
                 SigninWithPhone(credential);
             }
@@ -115,7 +115,7 @@ public class GuestLoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Intent i =new Intent(GuestLoginActivity.this,UserDashboard.class);
-                           // i.putExtra("website",website.getText().toString());
+                            // i.putExtra("website",website.getText().toString());
                             startActivity(i);
                             finish();
                         } else {
@@ -135,7 +135,7 @@ public class GuestLoginActivity extends AppCompatActivity {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
                 Log.v("userLogin","verification completed");
-               // Toast.makeText(GuestLoginActivity.this,"verification completed: ",Toast.LENGTH_SHORT).show();
+                // Toast.makeText(GuestLoginActivity.this,"verification completed: ",Toast.LENGTH_SHORT).show();
                 Toast.makeText(GuestLoginActivity.this,"enter the code ",Toast.LENGTH_SHORT).show();
 
             }
